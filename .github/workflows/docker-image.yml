@@ -27,4 +27,4 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         push: true
-        tags: jibinpb/flask-container-on-azure-app-service:$(date +%s)
+        tags: jibinpb/flask-container-on-azure-app-service:latest
