@@ -54,8 +54,8 @@ jobs:
             --name jibin-flask-container-on-azure-app-service \
             --deployment-container-image-name jibinpb/flask-container-on-azure-app-service:latest
 
-          az webapp config appsettings set  --resource-group pp-project-sandbox-rg \
-            --plan pp-project-sandbox-asp \
+          az webapp config appsettings set  --resource-group pp-project-sandbox-rg \            
+            --name jibin-flask-container-on-azure-app-service \
             --settings WEBSITES_PORT=50505
       
   
