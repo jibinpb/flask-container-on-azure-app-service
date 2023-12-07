@@ -37,6 +37,7 @@ jobs:
 
     runs-on: ubuntu-latest
     environment: dev
+    needs: [build]
 
     steps:
       - name: Azure Login
@@ -48,5 +49,9 @@ jobs:
       - name: 'Run az commands'
         run: |
           az account show
+          az webapp create --resource-group pp-project-sandbox-rg \
+            --plan pp-project-sandbox-asp \
+            --name jibin-flask-container-on-azure-app-service \
+            --deployment-container-image-name jibinpb/flask-container-on-azure-app-service:latest
       
   
